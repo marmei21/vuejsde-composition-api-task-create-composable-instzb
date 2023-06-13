@@ -24,24 +24,32 @@
 
 <script>
 import { defineComponent } from 'vue';
-
+import { useToggle } from '@/composables/use-toggle';
 export default defineComponent({
   setup() {
-    const showPrivileges = false;
-    const showSessions = true;
-    const showPurchases = true;
+    //const showPrivileges = false;
+    //const showSessions = true;
+    //const showPurchases = true;
+    const { on: showPrivileges, toggle: togglePrivileges } = useToggle(false);
+    const { on: showSessions, toggle: toggleSessions } = useToggle(true);
+    const { on: showPurchases, toggle: togglePurchases } = useToggle(true);
 
+    /*
     function togglePrivileges() {
       console.log('toggle privileges');
     }
+    */
 
+    /*
     function toggleSessions() {
       console.log('toggle sessions');
     }
+    */
 
+    /*
     function togglePurchases() {
       console.log('toggle purchases');
-    }
+    }*/
 
     return {
       showPrivileges,

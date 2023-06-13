@@ -11,5 +11,5 @@ export function useToggle(value: boolean = false) {
     on.value = value;
   }
 
-  return { on, toggle };
+  return { on, set, toggle };
 }
